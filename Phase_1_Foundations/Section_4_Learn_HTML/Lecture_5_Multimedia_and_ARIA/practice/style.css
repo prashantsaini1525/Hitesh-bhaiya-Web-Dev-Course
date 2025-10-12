@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+/* ----------------Navbar Starts here------------- */
+
+nav {
+    background-color: #333;
+    padding: 15px;
+    position: sticky;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: purple;
+    transition: 0.5s ease;
+}
+/* ----------------Ends here------------- */
+
+/* ----------------Same properties apply for all sections.------------- */
+
+h1 {
+    color: darkslateblue;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #4f1d1d;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+p {
+    color: black;
+    font-size: 18px;
+}
+
+section {
+    min-height: 100vh; /* Ensures it covers the full page */
+}
+
+.media {
+    padding: 50px;
+    margin-top: 0px;
+}
+/* ----------------End here------------- */
+
+/* ----------------Home Section Starts here------------- */
+
+#home {
+    padding: 50px;
+    background-color: aqua;
+}
+
+#home h1 {
+    margin-top: 100px;
+    color: purple;
+    background-color: gray;
+    font-size: 40px;
+    text-align: justify;
+}
+
+#home h2 {
+    background-color: #666;
+    color: rebeccapurple;
+    font-size: 25px;
+}
+
+#home p {
+    background-color: lightgreen;
+}
+
+/* ----------------Ends here------------- */
+
+/* ----------------Audio Section Starts here------------- */
+
+#audio {
+    background-color: lightcoral;
+}
+
+/* ----------------Ends here------------- */
+
+/* ----------------Video Starts here------------- */
+
+#video {
+    background-color: gray;
+}
+
+/* ----------------End here------------- */
+
+
+/* ----------------About Section Starts here------------- */
+
+#about{
+    background-color: lightblue;
+}
+
+#about h1 {
+    margin-bottom: 40px;
+}
+
+.info {
+    background-color: yellow;
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Align items vertically in the center */
+    gap: 40px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.info img {
+    max-width: 20%; /* Adjust image size */
+    border-radius: 10px;
+    margin-left: 40px;
+}
+
+.info .text {
+    max-width: 60%; /* Prevent text from getting too wide */
+    margin-right: 100px;
+}
+
+.info  h2 {
+            margin: 0 0 10px;
+            font-size: 2rem;
+        }
+
+.info p {
+    margin: 0;
+    line-height: 1.6;
+}
+/* ----------------Ends here------------- */
+
+#contact {
+    background-color: lightcyan;
+}
+
+/* ----------------Ends here------------- */
+
+/* ----------------Footer Starts here------------- */
+
+footer {
+    background-color: purple;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s ease;
+}

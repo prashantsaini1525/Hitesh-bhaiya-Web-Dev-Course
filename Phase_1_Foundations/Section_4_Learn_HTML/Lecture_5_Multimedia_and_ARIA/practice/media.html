@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Practice</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- Ques : Your are given 12 files: 6audio and 6 video.
+    Design a website using HTMl only which shows these 12 files.
+    1.mp3, 2.mp3 .... 6.mp3
+    1.mp4, 2.mp4 .... 6.mp4 -->
+
+  <!-- Media Player -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#audio">Audio</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h1>Hello,</h1>
+      <h2>This is a Simple HTML Based Media Player</h2>
+      <br>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore vel in nam corrupti qui, error nulla!
+        Soluta qui pariatur, molestias impedit quod assumenda animi culpa exercitationem. Nemo ipsam non neque
+        maiores. Amet esse, ducimus repudiandae libero illo ipsam exercitationem nam officia ullam, consequuntur
+        quisquam. Quod repellendus reiciendis doloremque quia in ullam accusantium atque, numquam nemo possimus
+        dolorum, voluptate adipisci saepe fuga mollitia? A, rem debitis? Nobis, repellat quae labore vero, quod
+        ipsa exercitationem voluptate molestias temporibus quas velit, possimus alias!</p>
+    </section>
+
+    <section id="audio" class="media">
+      <h1>Audio Section</h1>
+      <div id="funny">
+        <h2>Squid Game Ringtones</h2>
+        <audio src="../Assets/Audios/Squid Game/favorite.mp3" controls controlslist ="nofullscreen nodownload noremoteplayback noplaybackrate foobar" preload="metadata"></audio>
+        <audio src="../Assets/Audios/Squid Game/squid_game.mp3" controls preload="metadata"></audio>
+        <audio src="../Assets/Audios/Squid Game/squid_game_mingle_song.mp3" controls preload="metadata"></audio>
+        <audio src="../Assets/Audios/Squid Game/squid_game_robot.mp3" controls preload="metadata"></audio>
+        <!-- Add more audio files here -->
+      </div>
+
+      <div id="scary">
+        <h2>Scary Audios</h2>
+        <audio src="../Assets/Audios/Scary/abe-sale.mp3" controls preload="metadata"></audio>
+        <audio src="../Assets/Audios/Scary/rizz-sounds.mp3" controls preload="metadata"></audio>
+        <audio src="../Assets/Audios/Scary/shabash-beta.mp3" controls preload="metadata"></audio>
+      </div>
+      <div id="suspense">
+        <h2>Funny Audios</h2>
+        <audio src="../Assets/Audios/Funny/cat-laugh-meme-1.mp3" controls preload="metadata"></audio>
+        <audio src="../Assets/Audios/Funny/ny-video-online-audio-converter.mp3" controls preload="metadata"></audio>
+        <audio src="../Assets/Audios/Funny/shocked-sound-effect.mp3" controls preload="metadata"></audio>
+      </div>
+    </section>
+
+    <section id="video" class="media">
+      <h1 class="headline">Video Section</h1>
+      <div id="harry">
+        <h2 class="subheadline">Code With Harry</h2>
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/kqU2O7Kw_c8?si=INJqN5zt2lE71uH5"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/5Oy8tVY8BNs?si=5i6LNqUe5UZB2ESK"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/0HyIda5eub8?si=y1dOZmhf-sDYxRC5"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/mXZb9NytbmI?si=rqmDhJBRKXCk1jEg title="
+          YouTube video player frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/WXqOc-oor-E?si=TeX9O7fBgh596cH7"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/fKhyUZRsJXg?si=KLTzdwT8awuY8pNy"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <div id="dhruv">
+        <h2 class="subheadline">Dhruv Rathi Videos</h2>
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/2XvzIl2azGg?si=oUCEj7AG5SKgk0qa"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/jIzxxEYDHFM?si=GZGMhjUO_RstfDjD title="
+          YouTube video player frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/iZwJNf2OVvA?si=svFpisV6Q8ZS-Rlf"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/dl0pxBVxLVo?si=864rFXmMKVVguDRH"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/fwibtTUYo9s?si=K95XuXBCkbZ_VI2x"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/byRsgbhXg_8?si=OMh1z5c4lHrBCrXW"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <div id="itech">
+        <h2 class="subheadline">I Tech World Videos</h2>
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/5UIGlm91mg8?si=3KR-0RQfYWXYqV18"" title="
+          YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/8awjSoKh8rc?si=Tp3Wr9qXt7IDAiwN"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/rjyhhUyUvsg?si=97twHgQFeNS9CHl6"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/LRAQO8KnnXo?si=hu0qPUtX5z-ykStN"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/LovaDSejjso?si=GGnUS8246pjjs_Lh"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="230" height="150" src="https://www.youtube.com/embed/yrNHWX5Or7M?si=LMNf-Rs4szlAmO5L"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="about" class="media">
+      <h1>About Us</h1>
+      <div class="info">
+        <img src="../Assets/image/1.jpg" alt="Logo" class="logo">
+        <div class="text">
+          <h2>Information About Us</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non quam felis, in dictum lectus.
+            Nulla
+            facilisi. Donec non enim vel velit pulvinar convallis. Duis ut odio a enim placerat malesuada.
+            Donec
+            vel sapien eu neque bibendum vestibulum. Donec vel neque et tellus dictum rutrum. Quisque
+            convallis,
+            justo id consectetur lobortis, enim lectus vestibulum velit, in fringilla nunc neque vel tortor.
+            Donec auctor, purus in suscipit malesuada, velit metus consectetur neque, vel semper lectus mi
+            euismod neque.</p><br>
+          <p>Etiam in velit id velit fermentum consectetur. Donec vel enim a ipsum euismod lobortis. Nulla
+            facilisi. Sed in turpis vel mi consectetur fermentum. Donec ac arcu vel neque placerat aliquet.
+            Donec in nunc et arcu ultricies mattis vel vel arcu. Duis vel neque et tellus dictum rutrum.
+            Quisque
+            convallis, justo id consectetur lobortis, enim lectus vestibulum velit, in fring
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="media">
+      <div id="form">
+        <h1>Contact Us</h1>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" id="email" name="email" required
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Enter Your Email">
+          </div>
+          <div>
+            <label for="cityname">City:</label>
+            <input type="text" id="cityname" name="cityname" id="" required pattern="[A-Za-z\s]+"
+              placeholder="Enter Your City">
+          </div>
+          <div>
+            <label for="pincode">Phone No:</label>
+            <input type="text" id="phone" name="phone" required pattern="\d{12}"
+              placeholder="Enter Ten Digit Phone No.">
+          </div>
+          <div>
+            <label for="pincode">Pincode</label>
+            <input type="text" id="pincode" name="pincode" required pattern="\d{6}"
+              placeholder="Enter Six Digit Pincode">
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 All rights reserved. Designed by <a href="https://prashant-saini-22.vercel.app/"
+        target="_blank">Prashant Saini</a></p>
+  </footer>
+</body>
+
+</html>
