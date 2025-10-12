@@ -41,11 +41,3 @@ coverage/
 # Temporary files
 .tmp/
 .temp/
-
-# Optional: Course specific files
-notes/
-exercises/
-assignments/
-*.pdf
-*.zip
-*.rar
