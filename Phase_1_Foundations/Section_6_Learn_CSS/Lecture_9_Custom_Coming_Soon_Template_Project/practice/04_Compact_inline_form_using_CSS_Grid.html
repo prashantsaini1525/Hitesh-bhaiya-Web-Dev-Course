@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Chai — Compact</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: "Noto Sans", sans-serif;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f6f8fb;
+        padding: 24px;
+      }
+      .wrap {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(20, 20, 40, 0.08);
+        max-width: 700px;
+        width: 100%;
+      }
+      .top {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .logo {
+        width: 64px;
+      }
+      .title {
+        flex: 1;
+      }
+      h1 {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+      p {
+        margin: 4px 0 0;
+        color: #666;
+        font-size: 0.95rem;
+      }
+
+      .compact-form {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+        align-items: center;
+      }
+      input {
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid #e2e7ef;
+      }
+      input:focus {
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.08);
+        border-color: #8a2be2;
+      }
+      button {
+        padding: 10px 16px;
+        border-radius: 8px;
+        border: 0;
+        background: #8a2be2;
+        color: #fff;
+        cursor: pointer;
+      }
+      @media (max-width: 520px) {
+        .compact-form {
+          grid-template-columns: 1fr;
+          grid-auto-rows: auto;
+        }
+        button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <img class="logo" src="../images/cup-logo.png" alt="logo" />
+        <div class="title">
+          <h1>Chai — Launching soon</h1>
+          <p>Short and sweet updates — no spam.</p>
+        </div>
+      </div>
+
+      <form
+        class="compact-form"
+        onsubmit="event.preventDefault(); alert('You are saved')"
+      >
+        <input
+          type="email"
+          aria-label="Email"
+          placeholder="you@domain.com"
+          required
+        />
+        <button type="submit">Join</button>
+      </form>
+    </div>
+  </body>
+</html>

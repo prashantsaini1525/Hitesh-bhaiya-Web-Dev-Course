@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Chai — Frosted Card</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+      :root {
+        --accent1: #ff7eb6;
+        --accent2: #654ea3;
+        --glass: rgba(255, 255, 255, 0.12);
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: "Noto Sans", sans-serif;
+      }
+      body {
+        display: grid;
+        place-items: center;
+        background: linear-gradient(120deg, var(--accent1), var(--accent2));
+        animation: bg 12s linear infinite;
+      }
+      @keyframes bg {
+        0% {
+          filter: hue-rotate(0deg);
+        }
+        50% {
+          filter: hue-rotate(30deg);
+        }
+        100% {
+          filter: hue-rotate(0deg);
+        }
+      }
+
+      .panel {
+        width: min(92%, 420px);
+        padding: 28px;
+        border-radius: 18px;
+        background: var(--glass);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(8px) saturate(130%);
+        -webkit-backdrop-filter: blur(8px) saturate(130%);
+        color: #fff;
+        text-align: center;
+      }
+      .logo {
+        width: 84px;
+        margin: 0 auto 10px;
+        display: block;
+        filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 1.5rem;
+      }
+      p {
+        margin: 0 0 18px;
+        opacity: 0.9;
+      }
+
+      .form-row {
+        display: flex;
+        gap: 10px;
+      }
+      input {
+        flex: 1;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        background: transparent;
+        color: #fff;
+      }
+      input::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      button {
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: 0;
+        background: #fff;
+        color: var(--accent2);
+        font-weight: 700;
+        cursor: pointer;
+      }
+      button:active {
+        transform: translateY(1px);
+      }
+
+      @media (max-width: 420px) {
+        .form-row {
+          flex-direction: column;
+        }
+        button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panel">
+      <img class="logo" src="../images/cup-logo.png" alt="chai logo" />
+      <h1>Chai is Brewing</h1>
+      <p>We’ll be ready soon. Drop your email and we’ll ping you.</p>
+      <form onsubmit="event.preventDefault(); alert('You are on the list!')">
+        <div class="form-row">
+          <input type="email" placeholder="you@tea.mail" required />
+          <button type="submit">Notify</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Chai — Accessible</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #f1f4ff, #fff);
+      }
+      .card {
+        max-width: 480px;
+        margin: 80px auto;
+        padding: 22px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 12px 36px rgba(30, 40, 80, 0.08);
+      }
+      .logo {
+        width: 84px;
+        display: block;
+        margin: 0 auto 6px;
+      }
+      h1 {
+        text-align: center;
+        margin: 6px 0 12px;
+      }
+      form {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      input {
+        flex: 1;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #dcdfe6;
+      }
+      button {
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: 0;
+        background: #8a2be2;
+        color: #fff;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+      .message {
+        margin-top: 12px;
+        font-size: 0.95rem;
+        color: green;
+        display: none;
+      }
+      .error {
+        color: #c0392b;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img class="logo" src="../images/cup-logo.png" alt="Chai logo" />
+      <h1>Be the first to know</h1>
+      <form id="access-form" aria-describedby="form-desc">
+        <label class="sr-only" for="email">Email address</label>
+        <input
+          id="email"
+          type="email"
+          required
+          placeholder="email@example.com"
+          aria-required="true"
+          aria-invalid="false"
+        />
+        <button type="submit">Notify</button>
+      </form>
+      <div
+        id="form-desc"
+        class="message"
+        role="status"
+        aria-live="polite"
+      ></div>
+      <div id="err" class="error" role="alert"></div>
+    </div>
+
+    <script>
+      const form = document.getElementById("access-form");
+      const email = document.getElementById("email");
+      const msg = document.getElementById("form-desc");
+      const err = document.getElementById("err");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        err.style.display = "none";
+        const value = email.value.trim();
+        if (!value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+          email.setAttribute("aria-invalid", "true");
+          err.textContent = "Please enter a valid email address.";
+          err.style.display = "block";
+          return;
+        }
+        email.setAttribute("aria-invalid", "false");
+        // simulate server success
+        msg.textContent = "Thanks — we saved your email! 🎉";
+        msg.style.display = "block";
+        // clear after a few seconds to allow re-use
+        setTimeout(() => {
+          msg.style.display = "none";
+          form.reset();
+        }, 2500);
+      });
+
+      // keyboard: allow enter to submit from input (already default), but show focus style:
+      email.addEventListener(
+        "focus",
+        () => (email.style.boxShadow = "0 0 0 4px rgba(138,43,226,0.12)")
+      );
+      email.addEventListener("blur", () => (email.style.boxShadow = "none"));
+    </script>
+  </body>
+</html>

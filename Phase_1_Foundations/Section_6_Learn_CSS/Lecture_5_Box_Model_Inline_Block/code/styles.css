@@ -1,0 +1,58 @@
+/* Adding some basic styles for better readability */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+/* Step 1: Basic Box */
+.basic-box {
+  width: 400px;
+  height: 200px;
+  background-color: lightblue;
+  /* No other properties yet */
+}
+
+/* Step 2: Box with Padding */
+.padding-box {
+  width: 400px;
+  height: 200px;
+  background-color: lightgreen;
+  padding: 20px;
+}
+
+/* Step 3: Box with Border */
+.border-box {
+  width: 400px;
+  height: 200px;
+  background-color: lightpink;
+  padding: 20px;
+  border: 5px solid black;
+}
+
+/* Step 4: Box with Margin */
+.margin-box {
+  width: 400px;
+  height: 200px;
+  background-color: lightyellow;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 20px;
+}
+
+/* Inline vs Block Examples */
+.inline-element {
+  background-color: #ffcccb;
+  padding: 10px;
+  margin: 5px;
+}
+
+.block-element {
+  background-color: #90ee90;
+  padding: 10px;
+  margin: 5px;
+  width: 400px;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model for Beginners</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>Understanding the Box Model - Step by Step</h1>
+
+    <div class="section">
+      <h2>Step 1: Content Box</h2>
+      <div class="basic-box">This is just content with width and height</div>
+      <p>👆 This box only has:</p>
+      <ul>
+        <li>Total Width: 400px</li>
+        <li>Total Height: 200px</li>
+        <li>Background color</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Step 2: Adding Padding</h2>
+      <div class="padding-box">This box has padding added</div>
+      <p>👆 This box has:</p>
+      <ul>
+        <li>Everything from Step 1</li>
+        <li>Padding: 20px (space between content and border)</li>
+        <li>
+          Total Width = width + padding-left + padding-right = 400px + 20px +
+          20px = 440px
+        </li>
+        <li>
+          Total Height = height + padding-top + padding-bottom = 200px + 20px +
+          20px = 240px
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Step 3: Adding Border</h2>
+      <div class="border-box">This box has a border</div>
+      <p>👆 This box has:</p>
+      <ul>
+        <li>Everything from Step 2</li>
+        <li>Border: 5px solid black</li>
+        <li>
+          Total Width = width + padding-left + padding-right + border-left +
+          border-right = 400px + 20px + 20px + 5px + 5px = 450px
+        </li>
+        <li>
+          Total Height = height + padding-top + padding-bottom + border-top +
+          border-bottom = 200px + 20px + 20px + 5px + 5px = 250px
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Step 4: Adding Margin</h2>
+      <div class="margin-box">This box has margin</div>
+      <p>👆 This box has:</p>
+      <ul>
+        <li>Everything from Step 3</li>
+        <li>Margin: 20px (space outside the border)</li>
+        <li>
+          Total Width = width + padding-left + padding-right + border-left +
+          border-right + margin-left + margin-right = 400px + 20px + 20px + 5px
+          + 5px + 20px + 20px = 490px
+        </li>
+        <li>
+          Total Height = height + padding-top + padding-bottom + border-top +
+          border-bottom + margin-top + margin-bottom = 200px + 20px + 20px + 5px
+          + 5px + 20px + 20px = 290px
+        </li>
+      </ul>
+    </div>
+    <p><strong>Summary of Total Dimensions:</strong></p>
+    <ul>
+      <li>Step 1: 400px (width) x 200px (height)</li>
+      <li>Step 2: 440px (width) x 240px (height)</li>
+      <li>Step 3: 450px (width) x 250px (height)</li>
+      <li>Step 4: 490px (width) x 290px (height)</li>
+    </ul>
+
+    <p>
+      <strong>
+        Note: These calculations follow the standard box model. If you use
+        `box-sizing: border-box`, the calculations would be different.
+      </strong>
+    </p>
+
+    <div class="section">
+      <h2>Inline vs Block Elements</h2>
+      <p>Inline Elements (like spans) stay in the same line:</p>
+      <span class="inline-element">Inline 1</span>
+      <span class="inline-element">Inline 2</span>
+      <span class="inline-element">Inline 3</span>
+
+      <p>Block Elements (like divs) start on a new line:</p>
+      <div class="block-element">Block 1</div>
+      <div class="block-element">Block 2</div>
+      <div class="block-element">Block 3</div>
+    </div>
+  </body>
+</html>
